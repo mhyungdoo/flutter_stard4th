@@ -6,7 +6,7 @@ class Bottom extends StatelessWidget {
     return Container(
       color: Colors.black,
       child: Container(
-        height: 50,
+        height: 70,
         child: TabBar(
           labelColor: Colors.white,
           unselectedLabelColor: Colors.white60,
@@ -14,42 +14,42 @@ class Bottom extends StatelessWidget {
           tabs: <Widget>[
             Tab(
               icon: Icon(
-                Icons.home,
-                size: 18,
+                Icons.sentiment_satisfied,
+                size: 30,
               ),
               child: Text(
-                'Home',
-                style: TextStyle(fontSize: 9),
+                'Profile',
+                style: TextStyle(fontSize: 15),
               ),
             ),
             Tab(
               icon: Icon(
-                Icons.search,
-                size: 18,
+                Icons.developer_board,
+                size: 30,
               ),
               child: Text(
-                'Search',
-                style: TextStyle(fontSize: 9),
+                'Portfolio',
+                style: TextStyle(fontSize: 15),
               ),
             ),
             Tab(
               icon: Icon(
-                Icons.save_alt,
-                size: 18,
+                Icons.person_pin_circle,
+                size: 30,
               ),
               child: Text(
-                'Bookmark',
-                style: TextStyle(fontSize: 9),
+                'Location',
+                style: TextStyle(fontSize: 15),
               ),
             ),
             Tab(
               icon: Icon(
-                Icons.list,
-                size: 18,
+                Icons.contacts,
+                size: 30,
               ),
               child: Text(
-                'List',
-                style: TextStyle(fontSize: 9),
+                'Contact',
+                style: TextStyle(fontSize: 15),
               ),
             ),
           ],

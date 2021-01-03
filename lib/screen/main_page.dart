@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_stard4th_20201207/screen/location_page.dart';
+import 'package:flutter_stard4th_20201207/screen/portfolio_page.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -10,10 +12,47 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'STARD 4th',
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          brightness: Brightness.dark,
+          primaryColor: Colors.black,
+          accentColor: Colors.white,
         ),
         home: Scaffold(
+          drawer: Drawer(
+            child: ListView(
+              padding: EdgeInsets.zero,
+              children: <Widget>[
+                DrawerHeader(
+                  child: Text(
+                    '스타디4기',
+                    style: TextStyle(fontSize: 30),
+                  ),
+                  decoration: BoxDecoration(color: Colors.blue),
+                ),
+                ListTile(
+                  title: Text('Portfolio'),
+                  onTap: () {
+                    // 네이게이터 팝을 통해 드로워를 닫는다.
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PortfolioPage()),
+                    );
+                  },
+                ),
+                ListTile(
+                  title: Text('Location'),
+                  onTap: () {
+                    // 네이게이터 팝을 통해 드로워를 닫는다.
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ChessGame()),
+                    );
+                  },
+                ),
+              ],
+            ),
+          ),
           appBar: AppBar(
             title: Text('STARD 4th'),
           ),
@@ -25,54 +64,47 @@ class _MainPageState extends State<MainPage> {
                 fit: BoxFit.fitWidth,
               ),
               SizedBox(
-                height: 20,
+                height: 30,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(
-                    Icons.wifi_outlined,
+                    Icons.star,
                     size: 30,
                     color: Colors.green,
                   ),
                   Text(
-                    'My Portfolio',
-                    style: TextStyle(color: Colors.blue, fontSize: 30),
+                    'STARD CAFE Manager',
+                    style: TextStyle(color: Colors.blue, fontSize: 25),
                   ),
                   Icon(
                     Icons.star,
                     size: 30,
-                    color: Colors.blue,
+                    color: Colors.green,
                   ),
                 ],
               ),
               SizedBox(
-                height: 50,
+                height: 30,
               ),
               Text(
-                '1.StarD',
+                '기획자 & 개발자',
                 style: TextStyle(color: Colors.blue, fontSize: 30),
               ),
               SizedBox(
                 height: 30,
               ),
               Text(
-                '2.Sipro',
+                'Power Plant PM',
                 style: TextStyle(color: Colors.green, fontSize: 30),
               ),
               SizedBox(
                 height: 30,
               ),
               Text(
-                '3.ITUP',
-                style: TextStyle(color: Colors.redAccent, fontSize: 30),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Text(
-                '4.Fun.D',
-                style: TextStyle(color: Colors.black, fontSize: 30),
+                'Team Project Fun.D Founder',
+                style: TextStyle(color: Colors.redAccent, fontSize: 20),
               ),
               SizedBox(
                 height: 30,
@@ -81,7 +113,7 @@ class _MainPageState extends State<MainPage> {
                 padding: const EdgeInsets.all(30.0),
                 child: TextFormField(
                   decoration: InputDecoration(
-                    labelText: "Enter New Portfolio",
+                    labelText: "Enter New Profile",
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(35.0),
