@@ -53,6 +53,7 @@ class _MainPageState extends State<MainPage> {
               ],
             ),
           ),
+
           appBar: AppBar(
             title: Text('STARD 4th'),
           ),

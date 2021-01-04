@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_chess_board/flutter_chess_board.dart';
+//import 'package:flutter_chess_board/flutter_chess_board.dart';
+
 
 class ChessGame extends StatefulWidget {
   @override
@@ -15,7 +17,7 @@ class _ChessGameState extends State<ChessGame> {
       ),
       body: new Center(
         child: ChessBoard(
-          size: 400.0,
+          size: 300.0,
           onMove: (move) {
             print(move);
           },

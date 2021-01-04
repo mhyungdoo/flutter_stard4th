@@ -6,6 +6,8 @@ import 'package:flutter_stard4th_20201207/screen/portfolio_page.dart';
 
 import 'screen/contact_page.dart';
 
+
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.white,
         ),
         home: DefaultTabController(
-          length: 4,     // 하단 메뉴의 개수
+          length: 4, // 하단 메뉴의 개수
           child: Scaffold(
             body: TabBarView(
               physics: NeverScrollableScrollPhysics(),
@@ -28,8 +30,7 @@ class MyApp extends StatelessWidget {
                 MainPage(),
                 PortfolioPage(),
                 ChessGame(),
-                Contact(),   // 각 페이지 화면으로 연결할 클래스 이름
-
+                Contact(), // 각 페이지 화면으로 연결할 클래스 이름
               ],
             ),
             bottomNavigationBar: Bottom(),
